@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>job4j</groupId>
+    <groupId>uli.nick</groupId>
     <artifactId>Learn</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
@@ -71,6 +71,16 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <configuration>
+                    <packages>
+                        <param>uli.nick</param>
+                    </packages>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
