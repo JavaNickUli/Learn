@@ -7,6 +7,15 @@ import java.io.PrintStream;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
+/**
+ * {@code System.lineSeparator()} - Microsoft Windows systems it returns "\r\n".
+ * <pre>{@code System.out.println("Ping\nPong");}</pre>
+ * conform {@code "Ping\nPong\r\n"}
+ * <pre>{@code System.out.println("Ping");
+ * System.out.println("Pong");}</pre>
+ * conform {@code "Ping\r\nPong\r\n"}
+ */
+
 class Task12Test {
 
     @Test
@@ -15,9 +24,8 @@ class Task12Test {
         System.setOut(new PrintStream(out));
         Task12.main(null);
 
-        String actual = out.toString();
-        String expected = "Ping" + System.lineSeparator()
-                + "Pong" + System.lineSeparator();
+        String actual = out.toString().replace(System.lineSeparator(), "\n");
+        String expected = "Ping\nPong\n";
 
         then(actual).isEqualTo(expected);
     }
