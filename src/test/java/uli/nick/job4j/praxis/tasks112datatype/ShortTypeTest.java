@@ -8,17 +8,17 @@ import java.io.PrintStream;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
-class IntTypeTest {
+class ShortTypeTest {
 
     @Test
-    void whenEnterMaxValueIntThenOutMaxValueInt() {
-        System.setIn(new ByteArrayInputStream("2147483647".getBytes()));
+    void whenEnterMaxValueShortThenOutMaxValueShort() {
+        System.setIn(new ByteArrayInputStream("32767".getBytes()));
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        IntType.main(null);
+        ShortType.main(null);
 
         String actual = output.toString();
-        String expected = "2147483647" + System.lineSeparator();
+        String expected = "32767" + System.lineSeparator();
 
         then(actual).isEqualTo(expected);
     }
@@ -28,7 +28,7 @@ class IntTypeTest {
         System.setIn(new ByteArrayInputStream("0".getBytes()));
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        IntType.main(null);
+        ShortType.main(null);
 
         String actual = output.toString();
         String expected = "0" + System.lineSeparator();
@@ -37,14 +37,14 @@ class IntTypeTest {
     }
 
     @Test
-    void whenEnterMinValueIntThenOutMinValueInt() {
-        System.setIn(new ByteArrayInputStream("-2147483648".getBytes()));
+    void whenEnterMinValueShortThenOutMinValueShort() {
+        System.setIn(new ByteArrayInputStream("-32768".getBytes()));
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        IntType.main(null);
+        ShortType.main(null);
 
         String actual = output.toString();
-        String expected = "-2147483648" + System.lineSeparator();
+        String expected = "-32768" + System.lineSeparator();
 
         then(actual).isEqualTo(expected);
     }
