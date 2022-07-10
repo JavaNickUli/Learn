@@ -1,7 +1,5 @@
 package uli.nick.job4j.praxis.tasks111firstprogram;
 
-import java.util.ArrayList;
-
 /**
  * <p>1. Забытая точка с запятой
  * <p>Каждый оператор в Java должен заканчиваться точкой с запятой. Исправьте ошибку в приведенном коде.

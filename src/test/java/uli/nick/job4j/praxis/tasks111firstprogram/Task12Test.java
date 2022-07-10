@@ -19,7 +19,7 @@ import static org.assertj.core.api.BDDAssertions.then;
 class Task12Test {
 
     @Test
-    public void checkOutHelloJob4j() {
+    void checkOutHelloJob4j() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
         Task12.main(null);

@@ -10,7 +10,7 @@ import static org.assertj.core.api.BDDAssertions.then;
 class PraiseTest {
 
     @Test
-    public void checkPraise() {
+    void checkPraise() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
         Praise.main(null);

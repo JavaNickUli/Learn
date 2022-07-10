@@ -7,16 +7,16 @@ import java.io.PrintStream;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
-class PrintTest {
+class HelloWorldTest {
 
     @Test
-    public void checkPrint() {
+    void checkOutHelloJob4j() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        Print.main(null);
+        HelloWorld.main(null);
 
         String actual = out.toString();
-        String expected = "Сегодня я молодец!";
+        String expected = "Hello, Job4j!" + System.lineSeparator();
 
         then(actual).isEqualTo(expected);
     }
