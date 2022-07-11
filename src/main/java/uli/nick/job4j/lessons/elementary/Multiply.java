@@ -1,4 +1,4 @@
-package uli.nick.job4j.lessons.tasks111firstprogram;
+package uli.nick.job4j.lessons.elementary;
 
 /**
  * <p>4.1. Разбор первой программы. [#159033 #305514]

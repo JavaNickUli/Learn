@@ -1,6 +1,7 @@
 package uli.nick.job4j.lessons.tasks111firstprogram;
 
 import org.junit.jupiter.api.Test;
+import uli.nick.job4j.lessons.elementary.Multiply;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
