@@ -75,10 +75,16 @@ class ConvertList2ArrayTest {
     void toArrayWhen1Elements0CellsThenOutOfMemoryError() {
         try {
             ConvertList2Array.toArray(List.of(1), 0);
-        } catch (Exception e) {
-            e.printStackTrace();
         } catch (OutOfMemoryError e) {
             then(e.getMessage()).isEqualTo("Requested array size exceeds VM limit");
         }
+    }
+
+    @Test
+    void toArrayWhen0Elements0CellsThenArrayIsEmpty() {
+        int[][] actual = ConvertList2Array.toArray(List.of(), 0);
+        int[][] expected = {};
+
+        then(actual).isEqualTo(expected);
     }
 }
