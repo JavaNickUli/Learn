@@ -60,8 +60,8 @@ class FullSearchTest {
     @Test
     void extractNumberWhenListIsNullThenException() {
         try {
-            HashSet<String> actual = FullSearch.extractNumber(null);
-        } catch (Exception e) {
+            FullSearch.extractNumber(null);
+        } catch (NullPointerException e) {
             then(e.getMessage()).isEqualTo(
                     "Cannot invoke \"java.util.List.iterator()\" because \"list\" is null");
         }
