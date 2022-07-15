@@ -25,7 +25,7 @@ class CheckerAndGetterTest {
     }
 
     @Test
-    void getElementWhenListIsNullThenFirstString() {
+    void getElementWhenListIsNullThenException() {
         try {
             CheckerAndGetter.getElement(null);
         } catch (NullPointerException e) {
