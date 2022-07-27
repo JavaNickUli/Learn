@@ -8,6 +8,9 @@ public class RemoveFromArrayMoreThenTwo {
 
     public static int[] removeMoreThanTwo(int[] array) {
         int size = array.length;
+        if (size < 3) {
+            return array;
+        }
 
         for (int i = 1; i < size; i++) {
 
