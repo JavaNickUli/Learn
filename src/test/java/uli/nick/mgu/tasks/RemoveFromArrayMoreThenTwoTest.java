@@ -66,4 +66,24 @@ class RemoveFromArrayMoreThenTwoTest {
 
         then(actual).isEqualTo(expected);
     }
+
+    @Test
+    void removeMoreThanTwoTest6() {
+        int[] test = {1};
+
+        int[] actual = removeMoreThanTwo(test);
+        int[] expected = {1};
+
+        then(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void removeMoreThanTwoTest7() {
+        int[] test = {};
+
+        int[] actual = removeMoreThanTwo(test);
+        int[] expected = {};
+
+        then(actual).isEqualTo(expected);
+    }
 }

@@ -66,4 +66,24 @@ class MultiplyWithOddInArrayTest {
 
         then(actual == expected).isTrue();
     }
+
+    @Test
+    void multiplyWithOddTest6() {
+        int[] test = {1};
+
+        int actual = multiplyWithOdd(test);
+        int expected = 0;
+
+        then(actual == expected).isTrue();
+    }
+
+    @Test
+    void multiplyWithOddTest7() {
+        int[] test = {};
+
+        int actual = multiplyWithOdd(test);
+        int expected = 0;
+
+        then(actual == expected).isTrue();
+    }
 }
