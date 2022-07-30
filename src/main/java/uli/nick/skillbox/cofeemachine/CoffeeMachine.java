@@ -19,6 +19,7 @@ public class CoffeeMachine {
     }
 
     private static void initCoffeeMachine() {
+
         System.out.println("Инициализация...\nЗагрузка списка продукции...");
         List<String> listOfProducts = new ArrayList<>();
 
@@ -49,10 +50,28 @@ public class CoffeeMachine {
     }
 
     private static void startCoffeeMachine() {
+
         System.out.println("Кофемашина \"Coffee Like\".\n   Добро пожаловать!");
         System.out.println("Прайс на предлагаемую продукцию.");
         printListProducts(999);
         System.out.print("Внесите суму, пожалуйста: ");
+    }
+
+    private static void printListProducts(int amount) {
+
+        int minPrice = 999;
+
+        for (Product product : products) {
+            int price = product.getPrice();
+            if (price <= amount) {
+                minPrice = Math.min(minPrice, price);
+                System.out.println(product.getName() + " " + price);
+            }
+        }
+
+        if (amount < minPrice) {
+            System.out.println("Недостаточно средств для покупки.");
+        }
     }
 
     private static void amountCheck() {
@@ -81,21 +100,6 @@ public class CoffeeMachine {
             amount = cash;
             System.out.println("Вы внесли: " + cash + "руб.");
             System.out.println("Вы можете приобрести:");
-        }
-    }
-
-    private static void printListProducts(int amount) {
-        int minPrice = 999;
-
-        for (Product product : products) {
-            int price = product.getPrice();
-            if (price <= amount) {
-                minPrice = Math.min(minPrice, price);
-                System.out.println(product.getName() + " " + price);
-            }
-        }
-        if (amount < minPrice) {
-            System.out.println("Недостаточно средств для покупки.");
         }
     }
 }
