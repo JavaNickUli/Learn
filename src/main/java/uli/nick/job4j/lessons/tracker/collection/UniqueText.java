@@ -1,5 +1,6 @@
 package uli.nick.job4j.lessons.tracker.collection;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
@@ -17,20 +18,15 @@ import java.util.HashSet;
 
 public class UniqueText {
     public static boolean isEquals(String originText, String duplicateText) {
-        boolean result = true;
         String[] origin = originText.split(" ");
         String[] text = duplicateText.split(" ");
-        HashSet<String> check = new HashSet<>();
-        for (String element : origin) {
-            check.add(element);
-        }
+        HashSet<String> check = new HashSet<>(Arrays.asList(origin));
         for (String element : text) {
             if (!check.contains(element)) {
-                result = false;
-                break;
+                return false;
             }
         }
-        return result;
+        return true;
     }
 }
 
