@@ -1,4 +1,4 @@
-package uli.nick.stepik.basic;
+package uli.nick.stepik.basic.tasks13;
 
 import org.junit.jupiter.api.Test;
 import uli.nick.stepik.basic.tasks13.Quiz;
