@@ -1,6 +1,7 @@
 package uli.nick.stepik.basic;
 
 import org.junit.jupiter.api.Test;
+import uli.nick.stepik.basic.tasks13.Quiz;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

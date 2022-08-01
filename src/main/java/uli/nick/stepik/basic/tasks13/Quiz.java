@@ -1,4 +1,4 @@
-package uli.nick.stepik.basic;
+package uli.nick.stepik.basic.tasks13;
 
 import java.security.MessageDigest;
 
