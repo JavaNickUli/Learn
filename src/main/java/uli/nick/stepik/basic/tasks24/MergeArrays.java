@@ -17,9 +17,14 @@ public class MergeArrays {
 
     public static int[] mergeArrays(int[] a1, int[] a2) {
         int[] array = new int[a1.length + a2.length];
+        int i = 0, j = 0;
 
-        for (int i = 0, j = 0; i + j < array.length;) {
-            array[i + j] = j == a2.length || i < a1.length && a1[i] <= a2[j] ? a1[i++] : a2[j++];
+        while (i + j < array.length) {
+            if (j == a2.length || i < a1.length && a1[i] <= a2[j]) {
+                array[i + j] = a1[i++];
+            } else {
+                array[i + j] = a2[j++];
+            }
         }
 
         return array;
