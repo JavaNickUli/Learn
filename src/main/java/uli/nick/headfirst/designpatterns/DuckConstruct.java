@@ -6,7 +6,7 @@ import java.util.List;
 public class DuckConstruct {
     public static void main(String[] args) {
         List<Duck> allDuck = new ArrayList<>(List.of(
-                new MallardDuck(), new RedheadDuck()
+                new MallardDuck(), new RedheadDuck(), new RubberDuck()
         ));
         for (Duck duck : allDuck) {
             duck.display();
