@@ -1,14 +1,19 @@
 package uli.nick.headfirst.designpatterns;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DuckConstruct {
     public static void main(String[] args) {
-        Duck mallard = new MallardDuck();
-        Duck redhead = new RedheadDuck();
-        mallard.display();
-        mallard.quack();
-        mallard.swim();
-        redhead.display();
-        redhead.quack();
-        redhead.swim();
+        List<Duck> allDuck = new ArrayList<>(List.of(
+                new MallardDuck(), new RedheadDuck()
+        ));
+        for (Duck duck : allDuck) {
+            duck.display();
+            duck.quack();
+            duck.swim();
+            duck.fly();
+            System.out.println("_______________");
+        }
     }
 }
