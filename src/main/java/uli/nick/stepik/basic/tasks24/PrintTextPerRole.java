@@ -71,42 +71,20 @@ public class PrintTextPerRole {
                 "Артемий Филиппович: Вот не было заботы, так подай!",
                 "Лука Лукич: Господи боже! еще и с секретным предписаньем!"};
         System.out.println(printTextPerRole(roles, textLines));
-        System.out.println(per(roles, textLines));
     }
 
-    private static String printTextPerRole(String[] roles, String[] textLines) {
-        StringBuilder[] buildText = new StringBuilder[roles.length];
-        for (int i = 0; i < roles.length; i++) {
-            buildText[i] = new StringBuilder(roles[i] + ":\n");
-        }
-        for (int i = 0; i < textLines.length; i++) {
-            for (int j = 0; j < roles.length; j++) {
-                if (textLines[i].startsWith(roles[j] + ":")) {
-                    buildText[j].append(i + 1).append(")")
-                            .append(textLines[i].substring(roles[j].length() + 1)).append("\n");
-                    break;
-                }
-            }
-        }
-        StringBuilder play = new StringBuilder();
-        for (StringBuilder text : buildText) {
-            play.append(text).append("\n");
-        }
-        return play.toString();
-    }
-
-    public static String per(String[] roles, String[] textLines) {
-        StringBuilder play = new StringBuilder();
+    public static String printTextPerRole(String[] roles, String[] textLines) {
+        StringBuilder playRole = new StringBuilder();
         for (String role : roles) {
-            play.append(role).append(":\n");
+            playRole.append(role).append(":\n");
             for (int j = 0; j < textLines.length; j++) {
                 if (textLines[j].startsWith(role + ":")) {
-                    play.append(j + 1).append(")")
+                    playRole.append(j + 1).append(")")
                             .append(textLines[j].substring(role.length() + 1)).append("\n");
                 }
             }
-            play.append("\n");
+            playRole.append("\n");
         }
-        return play.toString();
+        return playRole.toString();
     }
 }
