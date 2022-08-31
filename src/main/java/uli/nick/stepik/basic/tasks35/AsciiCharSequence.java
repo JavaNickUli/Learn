@@ -1,8 +1,8 @@
 package uli.nick.stepik.basic.tasks35;
 
-public class AsciiCharSequence implements CharSequence{
+public class AsciiCharSequence implements CharSequence {
 
-    private byte[] ascii;
+    private final byte[] ascii;
 
     public AsciiCharSequence(byte[] array) {
         this.ascii = array;
