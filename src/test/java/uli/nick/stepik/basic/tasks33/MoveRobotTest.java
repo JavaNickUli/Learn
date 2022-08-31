@@ -3,7 +3,7 @@ package uli.nick.stepik.basic.tasks33;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.BDDAssertions.then;
-import static uli.nick.stepik.basic.tasks33.MoveRobot2.moveRobot;
+import static uli.nick.stepik.basic.tasks33.MoveRobot.moveRobot;
 
 class MoveRobotTest {
 
