@@ -1,18 +1,49 @@
 package uli.nick.stepik.basic.tasks35.analyzer;
 
-public class Analyzer {
-    public static void main(String[] args) {
-        SpamAnalyzer spamAnalyzer = new SpamAnalyzer(new String[]{"spam"});
-        NegativeTextAnalyzer negativeTextAnalyzer = new NegativeTextAnalyzer();
-        TooLongTextAnalyzer longTextAnalyzer = new TooLongTextAnalyzer(7);
-        TextAnalyzer[] analyzers = new TextAnalyzer[]{spamAnalyzer, negativeTextAnalyzer, longTextAnalyzer};
-        System.out.println(checkLabels(analyzers, "spam ="));       //должен выдать SPAM
-        System.out.println(checkLabels(analyzers, "pam =("));       //должен выдать NEGATIVE_TEXT
-        System.out.println(checkLabels(analyzers, "pam =48354"));   //должен выдать TOO_LONG
-        System.out.println(checkLabels(analyzers, "48354"));       // должен выдать OK
-    }
+/**
+ * <p>Представим, вы делаете систему фильтрации комментариев на каком-то веб-портале, будь то новости,
+ * видео-хостинг, а может даже для системы онлайн-обучения :)
+ * <p>Вы хотите фильтровать комментарии по разным критериям, уметь легко добавлять новые фильтры и модифицировать старые.
+ * <p>Допустим, мы будем фильтровать спам, комментарии с негативным содержанием и слишком длинные комментарии.
+ * <p>Спам будем фильтровать по наличию указанных ключевых слов в тексте.
+ * <p>Негативное содержание будем определять по наличию одного из трех смайликов – :( =( :|
+ * <p>Слишком длинные комментарии будем определять исходя из данного числа – максимальной длины комментария.
+ * <p>Вы решили абстрагировать фильтр в виде следующего интерфейса:
+ * <pre>{@code interface TextAnalyzer {
+ *     Label processText(String text);
+ * }}</pre>
+ * <p>Label – тип-перечисление, которые содержит метки, которыми будем помечать текст:
+ * <pre>{@code enum Label {
+ *     SPAM, NEGATIVE_TEXT, TOO_LONG, OK
+ * }}</pre>
+ * <p>Дальше, вам необходимо реализовать три класса, которые реализуют данный интерфейс: SpamAnalyzer,
+ * NegativeTextAnalyzer и TooLongTextAnalyzer.
+ * <p>SpamAnalyzer должен конструироваться от массива строк с ключевыми словами. Объект этого класса должен
+ * сохранять в своем состоянии этот массив строк в приватном поле keywords.
+ * <p>NegativeTextAnalyzer должен конструироваться конструктором по-умолчанию.
+ * <p>TooLongTextAnalyzer должен конструироваться от int'а с максимальной допустимой длиной комментария. Объект
+ * этого класса должен сохранять в своем состоянии это число в приватном поле maxLength.
+ * <p>Наверняка вы уже заметили, что SpamAnalyzer и NegativeTextAnalyzer во многом похожи – они оба проверяют
+ * текст на наличие каких-либо ключевых слов (в случае спама мы получаем их из конструктора, в случае негативного
+ * текста мы заранее знаем набор грустных смайликов) и в случае нахождения одного из ключевых слов возвращают
+ * Label (SPAM и NEGATIVE_TEXT соответственно), а если ничего не нашлось – возвращают OK.
+ * <p>Давайте эту логику абстрагируем в абстрактный класс KeywordAnalyzer следующим образом:
+ * <p>Выделим два абстрактных метода getKeywords и getLabel, один из которых будет возвращать набор ключевых слов,
+ * а второй метку, которой необходимо пометить положительные срабатывания. Нам незачем показывать эти методы
+ * потребителям классов, поэтому оставим доступ к ним только для наследников.
+ * <p>Реализуем processText таким образом, чтобы он зависел только от getKeywords и getLabel.
+ * <p>Сделаем SpamAnalyzer и NegativeTextAnalyzer наследниками KeywordAnalyzer и реализуем абстрактные методы.
+ * <p>Последний штрих – написать метод checkLabels, который будет возвращать метку для комментария по набору
+ * анализаторов текста. checkLabels должен возвращать первую не-OK метку в порядке данного набора анализаторов,
+ * и OK, если все анализаторы вернули OK.
+ * <p>Используйте, пожалуйста, модификатор доступа по-умолчанию для всех классов.
+ * <p>В итоге, реализуйте классы KeywordAnalyzer, SpamAnalyzer, NegativeTextAnalyzer и TooLongTextAnalyzer
+ * и метод checkLabels. TextAnalyzer и Label уже подключены, лишние импорты вам не потребуются.
+ */
 
-    public static Label checkLabels(TextAnalyzer[] analyzers, String text) {
+public class Analyzer {
+
+    public Label checkLabels(TextAnalyzer[] analyzers, String text) {
         for (TextAnalyzer textAnalyzer : analyzers) {
             Label returnLabel = textAnalyzer.processText(text);
             if (!returnLabel.equals(Label.OK)) {

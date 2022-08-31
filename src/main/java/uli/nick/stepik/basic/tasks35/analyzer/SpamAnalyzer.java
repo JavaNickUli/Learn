@@ -1,6 +1,6 @@
 package uli.nick.stepik.basic.tasks35.analyzer;
 
-public class SpamAnalyzer extends KeywordAnalyzer{
+public class SpamAnalyzer extends KeywordAnalyzer {
 
     private final String[] keywords;
     private final Label label;

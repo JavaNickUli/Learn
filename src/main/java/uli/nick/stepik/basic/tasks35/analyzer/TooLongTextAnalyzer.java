@@ -1,6 +1,6 @@
 package uli.nick.stepik.basic.tasks35.analyzer;
 
-public class TooLongTextAnalyzer implements TextAnalyzer{
+public class TooLongTextAnalyzer implements TextAnalyzer {
 
     private final int maxLength;
     private final Label label;

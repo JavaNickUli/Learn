@@ -1,6 +1,6 @@
 package uli.nick.stepik.basic.tasks35.analyzer;
 
-public abstract class KeywordAnalyzer implements TextAnalyzer{
+public abstract class KeywordAnalyzer implements TextAnalyzer {
 
     abstract protected String[] getKeywords();
 
