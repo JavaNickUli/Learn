@@ -2,6 +2,12 @@ package uli.nick.stepik.basic.tasks34;
 
 import java.util.Objects;
 
+/**
+ * <p>Дан класс ComplexNumber. Переопределите в нем методы equals() и hashCode() так, чтобы equals() сравнивал
+ * экземпляры ComplexNumber по содержимому полей re и im, а hashCode() был бы согласованным с реализацией equals().
+ * <p>Реализация hashCode(), возвращающая константу или не учитывающая дробную часть re и im, засчитана не будет
+ */
+
 public class ComplexNumber {
     private final double re;
     private final double im;
