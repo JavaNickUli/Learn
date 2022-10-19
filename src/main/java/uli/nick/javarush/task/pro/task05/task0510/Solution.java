@@ -9,13 +9,7 @@ public class Solution {
         for (int i = 0; i < result.length; i++) {
             result[i] = new int[i + 1];
             for (int j = 0; j <= i; j++) {
-                result[i][j] = i + j;
-            }
-        }
-
-        for (int[] row : result) {
-            for (int cell : row) {
-                System.out.print(cell + " ");
+                System.out.print((result[i][j] = i + j) + " ");
             }
             System.out.println();
         }
