@@ -34,7 +34,7 @@ public class Solution {
 
                 boolean duplicate = false;
                 for (int j = i + 1; j < strings.length; j++) {
-                    if (strings[j] != null && strings[j].equals(strings[i])) {
+                    if (strings[j] != null && strings[i].equals(strings[j])) {
                         strings[j] = null;
                        duplicate = true;
                     }
