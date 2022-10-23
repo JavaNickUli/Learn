@@ -1,4 +1,4 @@
-package uli.nick.javarush.task.pro.task10.task1011;
+package uli.nick.javarush.task.pro.task10.task1010;
 
 import java.util.Objects;
 

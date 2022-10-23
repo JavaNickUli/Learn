@@ -1,4 +1,4 @@
-package uli.nick.javarush.task.pro.task10.task1010;
+package uli.nick.javarush.task.pro.task10.task1009;
 
 public class Solution {
 

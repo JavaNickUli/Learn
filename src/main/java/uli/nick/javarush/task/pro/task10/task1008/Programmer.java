@@ -1,4 +1,4 @@
-package uli.nick.javarush.task.pro.task10.task1009;
+package uli.nick.javarush.task.pro.task10.task1008;
 
 public class Programmer {
 
