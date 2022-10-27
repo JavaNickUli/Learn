@@ -1,4 +1,4 @@
-package uli.nick.javarush.task.pro.task14.task1405;
+package uli.nick.javarush.task.pro.task14.task1406;
 
 import java.util.Scanner;
 
