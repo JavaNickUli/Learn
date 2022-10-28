@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.Scanner;
 
 public class Solution {
+
     public static void main(String[] args) throws IOException {
         byte[] bytes = args[0].getBytes();
         InputStream stream = System.in;

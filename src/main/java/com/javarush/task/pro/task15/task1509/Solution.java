@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Solution {
+
     public static void main(String[] args) {
         try (InputStream stream = System.in;
              Scanner scanner = new Scanner(stream)

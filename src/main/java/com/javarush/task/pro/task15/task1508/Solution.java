@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Solution {
+
     public static void main(String[] args) {
         try (InputStream stream = System.in;
              InputStreamReader reader = new InputStreamReader(stream);
