@@ -1,31 +1,31 @@
-package com.javarush.task.pro.task16.task1601;
+package com.javarush.task.pro.task16.task1604;
 
 import java.util.Calendar;
-import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Solution {
 
-    static Date birthDate = new Date(100, Calendar.DECEMBER, 14);
+    static Calendar birthDate = new GregorianCalendar(2000, Calendar.DECEMBER, 14);
 
     public static void main(String[] args) {
         System.out.println(getDayOfWeek(birthDate));
     }
 
-    static String getDayOfWeek(Date date) {
-        switch (date.getDay()) {
-            case 1:
+    static String getDayOfWeek(Calendar calendar) {
+        switch (calendar.get(Calendar.DAY_OF_WEEK)) {
+            case Calendar.MONDAY:
                 return "понедельник";
-            case 2:
+            case Calendar.TUESDAY:
                 return "вторник";
-            case 3:
+            case Calendar.WEDNESDAY:
                 return "среда";
-            case 4:
+            case Calendar.THURSDAY:
                 return "четверг";
-            case 5:
+            case Calendar.FRIDAY:
                 return "пятница";
-            case 6:
+            case Calendar.SATURDAY:
                 return "суббота";
-            case 0:
+            case Calendar.SUNDAY:
                 return "воскресенье";
             default:
                 return null;
