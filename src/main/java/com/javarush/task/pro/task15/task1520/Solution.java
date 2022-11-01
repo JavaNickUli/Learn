@@ -1,4 +1,4 @@
-package com.javarush.task.pro.task15.task1519;
+package com.javarush.task.pro.task15.task1520;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -15,7 +15,7 @@ public class Solution {
         try (DirectoryStream<Path> paths = Files.newDirectoryStream(sourceDirectory)) {
             for (Path path : paths) {
                 if (Files.isRegularFile(path)) {
-                    Files.copy(path, targetDirectory.resolve(path.getFileName()));
+                    Files.move(path, targetDirectory.resolve(path.getFileName()));
                 }
             }
         }

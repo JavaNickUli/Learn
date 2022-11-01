@@ -14,13 +14,13 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Path directory = Path.of(scanner.nextLine());
-        try (DirectoryStream<Path> files = Files.newDirectoryStream(directory)) {
-            for (Path file : files) {
-                if (Files.isRegularFile(file)) {
-                    System.out.println(file + THIS_IS_FILE);
+        try (DirectoryStream<Path> paths = Files.newDirectoryStream(directory)) {
+            for (Path path : paths) {
+                if (Files.isRegularFile(path)) {
+                    System.out.println(path + THIS_IS_FILE);
                 }
-                if (Files.isDirectory(file)) {
-                    System.out.println(file + THIS_IS_DIR);
+                if (Files.isDirectory(path)) {
+                    System.out.println(path + THIS_IS_DIR);
                 }
             }
         }
