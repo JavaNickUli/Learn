@@ -11,15 +11,9 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            Path path = Path.of(scanner.nextLine());
-            if (Files.isRegularFile(path)) {
-                System.out.println(path + THIS_IS_FILE);
-            } else if (Files.isDirectory(path)) {
-                System.out.println(path + THIS_IS_DIR);
-            } else {
-                break;
-            }
+        Path path;
+        while (Files.exists(path = Path.of(scanner.nextLine()))) {
+            System.out.println(path + (Files.isRegularFile(path) ? THIS_IS_FILE : THIS_IS_DIR));
         }
     }
 }
