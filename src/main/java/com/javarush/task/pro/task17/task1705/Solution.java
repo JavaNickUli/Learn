@@ -1,4 +1,4 @@
-package com.javarush.task.pro.task17.task1704;
+package com.javarush.task.pro.task17.task1705;
 
 import java.util.ArrayList;
 
@@ -12,10 +12,17 @@ public class Solution {
     }
 
     public static void runWorkingProcess() {
-        pilot((Human) astronauts.get(0));
-        pilot((Human) astronauts.get(1));
-        createDirection((Dog) astronauts.get(2));
-        research((Cat) astronauts.get(3));
+        for (Astronaut astronaut : astronauts) {
+            if (astronaut instanceof Human) {
+                pilot((Human) astronaut);
+            }
+            if (astronaut instanceof Dog) {
+                createDirection((Dog) astronaut);
+            }
+            if (astronaut instanceof Cat) {
+                research((Cat) astronaut);
+            }
+        }
     }
 
     public static void pilot(Human human) {
