@@ -7,6 +7,6 @@ public class Dog extends Pet {
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("Я люблю людей.");
+        System.out.println(DOG);
     }
 }
