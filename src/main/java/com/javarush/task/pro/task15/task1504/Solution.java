@@ -15,12 +15,10 @@ public class Solution {
             byte[] buffer = new byte[65536];
             while (input.available() > 0) {
                 int real = input.read(buffer);
-                for (int i = 1; i < real; i++) {
-                    if (i % 2 != 0) {
+                for (int i = 1; i < real; i += 2) {
                         byte temp = buffer[i];
                         buffer[i] = buffer[i - 1];
                         buffer[i - 1] = temp;
-                    }
                 }
                 output.write(buffer, 0, real);
             }
