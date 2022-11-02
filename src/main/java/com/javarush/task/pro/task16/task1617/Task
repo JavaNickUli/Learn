@@ -1,0 +1,4 @@
+В методе main присвой значение переменной globalTime, используя переменные localDateTime и zoneId.
+
+Требования:
+Метод main должен присвоить значение переменной globalTime, используя переменные localDateTime и zoneId.
