@@ -1,0 +1,9 @@
+Измени два класса — Apple и IPhone.
+Унаследуй IPhone от Apple.
+
+Требования:
+В классе Solution должен быть класс Apple.
+Класс Apple должен быть public.
+В классе Solution должен быть класс IPhone.
+Класс IPhone должен быть public.
+Класс IPhone должен быть унаследован от Apple.
