@@ -31,9 +31,7 @@ public class Solution {
         int decimal = 0;
         int i = hexNumber.length() - 1;
         for (char el : hexNumber.toCharArray()) {
-            int x = HEX.indexOf(el);
-            int y = (int) Math.pow(16, i--);
-            decimal += x * y;
+            decimal += (int) Math.pow(16, i--) * HEX.indexOf(el);
         }
         return decimal;
     }
