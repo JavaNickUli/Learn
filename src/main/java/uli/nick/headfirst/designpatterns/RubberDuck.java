@@ -1,10 +1,10 @@
 package uli.nick.headfirst.designpatterns;
 
-public class RubberDuck extends Duck{
+public class RubberDuck extends Duck implements Quackable{
 
     @Override
     public void quack() {
-        System.out.println("Tcc.");
+        System.out.println("Писк.");
     }
 
     @Override

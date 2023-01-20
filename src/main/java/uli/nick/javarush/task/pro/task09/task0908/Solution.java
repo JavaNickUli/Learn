@@ -45,7 +45,6 @@ public class Solution {
         }
 
         String binary = "";
-        int count = 3;
         int decimal;
         for (char el : hexNumber.toCharArray()) {
             if (el >= '0' && el <= '9') {
@@ -55,13 +54,12 @@ public class Solution {
             } else {
                 return "";
             }
-
+            int count = 3;
             while (count >= 0) {
                 int pow2 = (int) Math.pow(2, count--);
                 binary += decimal / pow2;
                 decimal -= pow2 * (binary.charAt(binary.length() - 1) - '0');
             }
-            count = 3;
         }
 
         return binary;

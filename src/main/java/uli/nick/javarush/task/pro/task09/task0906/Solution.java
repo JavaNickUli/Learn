@@ -11,28 +11,23 @@ public class Solution {
     }
 
     public static String toBinary(int decimalNumber) {
-
         String binary = "";
         while (decimalNumber > 0) {
             binary = decimalNumber % 2 + binary;
             decimalNumber /= 2;
         }
-
         return binary;
     }
 
     public static int toDecimal(String binaryNumber) {
-
         if (binaryNumber == null || binaryNumber.isEmpty()) {
             return 0;
         }
-
         int decimal = 0;
         int i = binaryNumber.length() - 1;
         for (char el : binaryNumber.toCharArray()) {
             decimal += (el - '0') * Math.pow(2, i--);
         }
-
         return decimal;
     }
 }
