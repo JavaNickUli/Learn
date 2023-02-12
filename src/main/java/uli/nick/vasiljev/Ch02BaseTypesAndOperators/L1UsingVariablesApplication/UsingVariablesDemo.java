@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch02.task0201;
+package uli.nick.vasiljev.Ch02BaseTypesAndOperators.L1UsingVariablesApplication;
 
 import javax.swing.*;
 
-public class UsingVariablesApplication {
+public class UsingVariablesDemo {
 
     public static void main(String[] args) {
         int number = 123;

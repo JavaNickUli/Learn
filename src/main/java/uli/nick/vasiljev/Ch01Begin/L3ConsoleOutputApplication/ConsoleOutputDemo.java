@@ -1,6 +1,6 @@
-package uli.nick.vasiljev.ch01.task0103;
+package uli.nick.vasiljev.Ch01Begin.L3ConsoleOutputApplication;
 
-public class ConsoleOutputApplication {
+public class ConsoleOutputDemo {
 
     public static void main(String[] args) {
         System.out.println("Мы изучаем язык Java!");

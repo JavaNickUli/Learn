@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch01.task0106;
+package uli.nick.vasiljev.Ch01Begin.L5ShowMeWindowsApplication;
 
 import javax.swing.*;
 
-public class ShowMeWindowsApplication {
+public class ShowMeWindowsDemo {
 
     public static void main(String[] args) {
         String title;

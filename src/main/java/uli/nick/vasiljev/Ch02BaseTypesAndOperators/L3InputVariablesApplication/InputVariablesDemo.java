@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch02.task0203;
+package uli.nick.vasiljev.Ch02BaseTypesAndOperators.L3InputVariablesApplication;
 
 import javax.swing.*;
 
-public class InputVariablesApplication {
+public class InputVariablesDemo {
 
     public static void main(String[] args) {
         int age, year, birth;

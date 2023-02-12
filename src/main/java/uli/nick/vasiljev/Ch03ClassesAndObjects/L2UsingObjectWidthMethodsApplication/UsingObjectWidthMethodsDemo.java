@@ -1,4 +1,4 @@
-package uli.nick.vasiljev.ch03.UsingObjectWidthMethodsApplication;
+package uli.nick.vasiljev.Ch03ClassesAndObjects.L2UsingObjectWidthMethodsApplication;
 
 import javax.swing.*;
 

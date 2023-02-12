@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch01.task0107;
+package uli.nick.vasiljev.Ch01Begin.L6ConsoleInputApplication;
 
 import java.util.Scanner;
 
-public class ConsoleInputApplication {
+public class ConsoleInputDemo {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

@@ -1,6 +1,6 @@
-package uli.nick.vasiljev.ch02.task0202;
+package uli.nick.vasiljev.Ch02BaseTypesAndOperators.L2UsingVarsConsoleApplication;
 
-public class UsingVarsConsoleApplication {
+public class UsingVarsConsoleDemo {
 
     public static void main(String[] args) {
         int number = 123;

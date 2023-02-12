@@ -1,4 +1,4 @@
-package uli.nick.vasiljev.ch03.UsingObjectApplication;
+package uli.nick.vasiljev.Ch03ClassesAndObjects.L1UsingObjectApplication;
 
 import javax.swing.*;
 

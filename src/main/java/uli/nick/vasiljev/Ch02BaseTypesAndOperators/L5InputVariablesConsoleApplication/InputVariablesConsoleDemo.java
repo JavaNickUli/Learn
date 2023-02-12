@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch02.task0205;
+package uli.nick.vasiljev.Ch02BaseTypesAndOperators.L5InputVariablesConsoleApplication;
 
 import java.util.Scanner;
 
-public class InputVariablesConsoleApplication {
+public class InputVariablesConsoleDemo {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

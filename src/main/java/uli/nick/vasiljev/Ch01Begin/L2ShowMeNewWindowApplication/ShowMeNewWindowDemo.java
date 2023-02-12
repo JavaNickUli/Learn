@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch01.task0102;
+package uli.nick.vasiljev.Ch01Begin.L2ShowMeNewWindowApplication;
 
 import javax.swing.*;
 
-public class ShowMeNewWindowApplication {
+public class ShowMeNewWindowDemo {
 
     public static void main(String[] args) {
         String title = "Сообщение";

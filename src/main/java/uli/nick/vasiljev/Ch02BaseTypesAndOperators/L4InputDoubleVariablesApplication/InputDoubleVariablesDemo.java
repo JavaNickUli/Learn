@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch02.task0204;
+package uli.nick.vasiljev.Ch02BaseTypesAndOperators.L4InputDoubleVariablesApplication;
 
 import javax.swing.*;
 
-public class InputDoubleVariablesApplication {
+public class InputDoubleVariablesDemo {
 
     public static void main(String[] args) {
         double mass, height, bmi;

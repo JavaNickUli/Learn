@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch01.task0101;
+package uli.nick.vasiljev.Ch01Begin.L1ShowMeAWindowApplication;
 
 import javax.swing.*;
 
-public class ShowMeAWindowApplication {
+public class ShowMeAWindowDemo {
 
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null, "Первая программа на Java!");

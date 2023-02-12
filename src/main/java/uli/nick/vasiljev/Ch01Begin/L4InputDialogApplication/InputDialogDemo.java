@@ -1,8 +1,8 @@
-package uli.nick.vasiljev.ch01.task0105;
+package uli.nick.vasiljev.Ch01Begin.L4InputDialogApplication;
 
 import javax.swing.*;
 
-public class InputDialogApplication {
+public class InputDialogDemo {
 
     public static void main(String[] args) {
         String text;
