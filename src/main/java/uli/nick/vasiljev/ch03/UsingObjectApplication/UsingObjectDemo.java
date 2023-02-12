@@ -1,4 +1,4 @@
-package uli.nick.vasiljev.ch03.task0301;
+package uli.nick.vasiljev.ch03.UsingObjectApplication;
 
 import javax.swing.*;
 
