@@ -7,9 +7,9 @@ public class ConsoleInputDemo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String day, month;
-        System.out.println("Какой сегодня день?");
+        System.out.print("Какой сегодня день? ");
         day = input.nextLine();
-        System.out.println("Какой месяц?");
+        System.out.print("Какой месяц? ");
         month = input.nextLine();
         String text;
         text = "Сегодня " + day + ", месяц - " + month;
