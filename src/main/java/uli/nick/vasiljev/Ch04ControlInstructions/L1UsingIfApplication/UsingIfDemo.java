@@ -1,4 +1,4 @@
-package uli.nick.vasiljev.Ch04ControlInstructions.UsingIfApplication;
+package uli.nick.vasiljev.Ch04ControlInstructions.L1UsingIfApplication;
 
 import javax.swing.*;
 
