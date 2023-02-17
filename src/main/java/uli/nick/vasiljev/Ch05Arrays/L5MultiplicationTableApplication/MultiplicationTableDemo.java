@@ -10,7 +10,7 @@ public class MultiplicationTableDemo {
             txt += i + "\t";
         }
         txt += "\n";
-        for (int i = 1; i <= 42; i++) {
+        for (int i = 1; i <= 6 + 4 * cols; i++) {
             txt += "-";
         }
         for (int i = 0; i < table.length; i++) {
