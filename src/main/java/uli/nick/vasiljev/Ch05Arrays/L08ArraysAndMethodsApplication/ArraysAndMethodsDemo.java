@@ -35,7 +35,7 @@ public class ArraysAndMethodsDemo {
         int[] C = prod(A, B);
         System.out.println("Матрица A:");
         show2D(A);
-        System.out.println("Матрица B:");
+        System.out.println("Вектор B:");
         show1D(B);
         System.out.println("Вектор C=AB:");
         show1D(C);
